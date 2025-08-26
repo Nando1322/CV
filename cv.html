@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Fernando Cruz Velázquez</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #121212;
+      color: #fff;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("foto2.jpg") no-repeat center center / cover;
+      opacity: 0.7;
+      z-index: -1;
+      filter: brightness(0.6);
+    }
+
+    a {
+      color: #e63946;
+      text-decoration: none;
+      transition: color 0.3s ease-in-out;
+    }
+
+    a:hover {
+      color: #fff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 20px auto;
+      background: rgba(28, 28, 28, 0.9);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 25px rgba(230, 57, 70, 0.6);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes glow {
+      0% { box-shadow: 0 0 5px #e63946; }
+      50% { box-shadow: 0 0 20px #e63946; }
+      100% { box-shadow: 0 0 5px #e63946; }
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(90deg, #e63946, #900d0d);
+      padding: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .header-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .photo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: #333;
+      border: 4px solid #fff;
+      margin-right: 20px;
+      overflow: hidden;
+      animation: glow 3s infinite alternate;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .header h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+      text-shadow: 0 0 5px #000;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .header p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.facebook {
+  background-color: #1877f2; 
+  position: relative;
+}
+
+.facebook::before {
+  content: "f";
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  color: white;
+}
+
+.instagram {
+  background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 15%, 
+              #fd5949 45%, #d6249f 70%, #285AEB 90%);
+  border-radius: 19px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.instagram::before {
+  content: "";
+  width: 29px;
+  height: 29px;
+  border: 3px solid white;
+  border-radius: 6px;
+  display: block;
+  position: absolute;
+}
+
+.instagram::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+.instagram .lens {
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 22px; 
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+    .nav {
+      display: flex;
+      justify-content: space-around;
+      background: #222;
+    }
+
+    .nav a {
+      flex: 1;
+      text-align: center;
+      padding: 12px;
+      color: #fff;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .nav a:hover {
+      background: #e63946;
+      transform: scale(1.05);
+      box-shadow: inset 0 0 10px #fff;
+    }
+
+    section {
+      padding: 20px;
+      border-bottom: 1px solid #444;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    section h2 {
+      color: #e63946;
+      margin-bottom: 10px;
+      border-left: 4px solid #e63946;
+      padding-left: 8px;
+    }
+
+    ul {
+      list-style: none;
+      margin-left: 15px;
+    }
+
+    ul li {
+      margin: 6px 0;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    ul li:hover {
+      transform: translateX(5px);
+      color: #e63946;
+    }
+
+    .download-btn {
+      display: block;
+      text-align: center;
+      background: #e63946;
+      color: #fff;
+      padding: 12px;
+      margin: 20px auto;
+      width: 220px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease-in-out;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .download-btn:hover {
+      background: #c72534;
+      transform: scale(1.1);
+      box-shadow: 0 0 15px #fff;
+    }
+
+    @media print {
+      body::before {
+        display: none;
+      }
+      .nav, .download-btn, .social-icons {
+        display: none;
+      }
+      .container {
+        background: #fff;
+        color: #000;
+        box-shadow: none;
+      }
+      section h2 {
+        color: #000;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-info">
+        <div class="photo">
+          <img src="foto.jpg" alt="FOTO">
+        </div>
+        <div>
+          <h1>Fernando Cruz Velázquez</h1>
+          <p>Estudiante de Ingeniería en Tecnologías de la Información</p>
+        </div>
+      </div>
+
+        <div class="social-icons">
+        <a href="https://www.facebook.com/nando.cv.88217/?locale=es_LA" target="_blank" class="icon facebook"></a>
+        <a href="https://www.instagram.com/nando_cruzv/" target="_blank" class="icon instagram"> <span class="lens"></span></a>
+        </div>
+
+    </div>
+
+    <div class="nav">
+      <a href="#info">Personal Info</a>
+      <a href="#exp">Experiencia</a>
+      <a href="#edu">Educación</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#projects">Proyectos</a>
+    </div>
+
+    <section id="info">
+      <h2>Datos Personales</h2>
+      <p><b>Email:</b> <a href="mailto:nandocruziti@gmail.com">nandocruziti@gmail.com</a></p>
+      <p><b>Teléfono:</b> +52 722 893 9304</p>
+      <p><b>Dirección:</b> Calle 16 de Septiembre No. 10, Barrio de México, Santa María del Monte</p>
+      <p><b>Fecha de nacimiento:</b> 2003-04-07</p>
+      <p><b>Industria:</b> Tecnologías de la información</p>
+      <p><b>Educación:</b> Licenciatura (en curso)</p>
+      <p><b>Experiencia:</b> 1 año</p>
+    </section>
+
+    <section id="exp">
+      <h2>Experiencia Laboral</h2>
+      <ul>
+        <li><b>Auxiliar del área de TI</b> - UNIEM, Toluca (Enero 2024 - Ago 2024)</li>
+        <li><b>Auxiliar en desarrollo web</b> - NetRabbit, S.A. de C.V. (Sept - Dic 2024)</li>
+      </ul>
+    </section>
+
+    <section id="edu">
+      <h2>Educación</h2>
+      <p><b>Ingeniería en Tecnologías de la Información</b><br>
+         Universidad Politécnica del Valle de Toluca, Sep 2023 - Actualmente</p>
+    </section>
+
+    <section id="skills">
+      <h2>Habilidades</h2>
+      <ul>
+        <li>Trabajo en equipo, Comunicación efectiva, Aprendizaje rápido, Adaptabilidad</li>
+        <li>Pensamiento crítico, Resolución de problemas, Proactividad</li>
+        <li>Virtualización y contenedores (VirtualBox, Docker)</li>
+        <li>Bases de datos (MySQL, SQL Server)</li>
+        <li>Seguridad informática (firewalls, ACL, políticas de acceso)</li>
+        <li>Programación en Java, Python, PHP y JavaScript</li>
+        <li>Sistemas operativos Windows y Linux</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Proyectos Destacados</h2>
+      <ul>
+        <li>API de videollamadas web</li>
+        <li>Sistema web de inventario</li>
+        <li>Punto de venta para establecimiento de comida</li>
+        <li>Página web para tickets de soporte técnico</li>
+      </ul>
+    </section>
+
+    <button class="download-btn" onclick="window.print()">Descargar PDF</button>
+  </div>
+</body>
+</html>
